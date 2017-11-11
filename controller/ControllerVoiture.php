@@ -7,6 +7,7 @@ require_once ("$tab"); // chargement du modèle
 class ControllerVoiture {
     public static function readAll() {
         $tab_v = ModelVoiture::getAllVoitures();     //appel au modèle pour gerer la BD
+        $pagetitle = 'All cars';
         $controller = 'voiture';
         $view = 'list';
         $path_to_list = array("view", "view.php");
@@ -17,6 +18,7 @@ class ControllerVoiture {
     public static function read() {
         $immat = $_GET['immat'];
         $v = ModelVoiture::getVoitureByImmat($immat);
+        $pagetitle = 'That car';
         $controller = 'voiture';
         $view = 'detail';
         $tab_to_detail = File::build_path(array("view","view.php"));
@@ -28,6 +30,7 @@ class ControllerVoiture {
     }
     
     public static function create() {
+        $pagetitle = 'Add your car';
         $controller = 'voiture';
         $view = 'create';
         require (File::build_path(array("view","view.php")));
