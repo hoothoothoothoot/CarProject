@@ -48,9 +48,11 @@ class ControllerVoiture {
     }
     
     public static function created() {
-        $car = new ModelVoiture($_POST['marque'], $_POST['couleur'], $_POST['immatriculation']);
+        $car = new ModelVoiture($_POST['marque'], $_POST['couleur'], $_POST['immatriculation'], $_POST['password']);
         $car -> save();
         ControllerVoiture::readAll();
     }
+    
+    //todo updated and update
 }
 ?>
