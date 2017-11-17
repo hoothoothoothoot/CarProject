@@ -46,6 +46,13 @@ class ModelVoiture {
     $req_prep->execute($values);
     
   }
+  
+  public static function update($data) {
+      $rep = Model::$pdo->query("UPDATE Voiture v SET marque=:brand, couleur=:color WHERE immatriculation=:immat");
+      $rep_prep = Model::$pdo->prepare($rep);
+      $values = array("brand" => $data[1], "color" => $data[2]);
+      $rep_prep->execute($values);
+  }
 
   public static function getVoitureByImmat($immat) {
     $sql = "SELECT * FROM Voiture WHERE immatriculation=:nom_tag";

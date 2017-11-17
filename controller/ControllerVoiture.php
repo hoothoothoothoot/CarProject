@@ -53,6 +53,16 @@ class ControllerVoiture {
         ControllerVoiture::readAll();
     }
     
-    //todo updated and update
+    public static function update() {
+        $pagetitle = 'Update your car';
+        $controller = 'voiture';
+        $view = 'update';
+        require (File::buildpath("view","view.php"));
+    }
+    
+    public static function updated() {
+        $car = ModelVoiture::update($_POST);
+        ControllerVoiture::readAll();
+    }
 }
 ?>
