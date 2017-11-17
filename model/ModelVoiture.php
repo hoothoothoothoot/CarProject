@@ -70,7 +70,9 @@ class ModelVoiture {
   
   public static function deleteByImmat($immat) {
       $rep = Model::$pdo->query("DELETE FROM Voiture WHERE immatriculation=:nom_tag");
-      //TODO
+      $rep_prep = Model::$pdo->prepare($rep);
+      $values = array("nom_tag" => $immat);
+      $rep_prep->execute($values);
   }
   
   // a constructor

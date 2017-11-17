@@ -5,6 +5,17 @@ $tab = File::build_path($path_array);
 require_once ("$tab"); // chargement du modèle
 
 class ControllerVoiture {
+    
+    public static function delete() {
+        $immat = $_GET['immat'];
+        $v = ModelVoiture::deleteByImmat($immat);
+        $pagetitle = 'Car deleted';
+        $view = 'deleted';
+        $controller = 'voiture';
+        require (File::build_path("view","view.php"));
+        ControllerVoiture::readAll();
+    }
+    
     public static function readAll() {
         $tab_v = ModelVoiture::getAllVoitures();     //appel au modèle pour gerer la BD
         $pagetitle = 'All cars';

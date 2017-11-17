@@ -14,6 +14,14 @@
             <input type="text" placeholder="Ex : 256AB34" name="immatriculation" id="immat_id" required/>
         </p>
         <p>
+            <label for="password">Password</label>
+            <input type="password" placeholder="" name="password" id="password" required/>
+        </p>
+        <p>
+            <label for="confirm">Please confirm password</label>
+            <input type="password" placeholder="" name="confirm" id="confirm" required/>
+        </p>
+        <p>
             <input type="submit" value="Submit" />
         </p>
     </fieldset> 
