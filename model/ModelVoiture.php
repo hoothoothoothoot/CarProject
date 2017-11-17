@@ -68,6 +68,11 @@ class ModelVoiture {
     return $tab_voit;
   }
   
+  public static function deleteByImmat($immat) {
+      $rep = Model::$pdo->query("DELETE FROM Voiture WHERE immatriculation=:nom_tag");
+      //TODO
+  }
+  
   // a constructor
   public function __construct($m=NULL, $c=NULL, $i=NULL)  {
       if(!is_null($m) && !is_null($c) && !is_null($i)) {

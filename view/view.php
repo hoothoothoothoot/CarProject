@@ -18,6 +18,6 @@
         ?>
     </body>
     <footer>
-        <p style="border: 1px solid black; text-align:right; padding-right:1em;">Test of Hoot</p>
+        <p style="border: 1px solid black; text-align:right; padding-right:1em;">Carpool of Hoot</p>
     </footer>
 </html>
