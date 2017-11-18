@@ -3,13 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/hoot/Documents/public_html/CarProject/view/voiture/list.php</file>
-            <file>file:/home/hoot/Documents/public_html/CarProject/controller/ControllerVoiture.php</file>
-            <file>file:/home/hoot/Documents/public_html/CarProject/model/ModelVoiture.php</file>
-            <file>file:/home/hoot/Documents/public_html/CarProject/index.php</file>
-            <file>file:/home/hoot/Documents/public_html/CarProject/controller/routeur.php</file>
-            <file>file:/home/hoot/Documents/public_html/CarProject/lib/File.php</file>
-            <file>file:/home/hoot/Documents/public_html/CarProject/view/view.php</file>
+            <file>file:/home/ann2/rabesonw/public_html/CarProject/index.php</file>
+            <file>file:/home/ann2/rabesonw/public_html/CarProject/lib/File.php</file>
+            <file>file:/home/ann2/rabesonw/public_html/CarProject/controller/ControllerVoiture.php</file>
+            <file>file:/home/ann2/rabesonw/public_html/CarProject/model/ModelVoiture.php</file>
+            <file>file:/home/ann2/rabesonw/public_html/CarProject/session.php</file>
+            <file>file:/home/ann2/rabesonw/public_html/CarProject/controller/routeur.php</file>
+            <file>file:/home/ann2/rabesonw/public_html/CarProject/view/view.php</file>
         </group>
     </open-files>
 </project-private>

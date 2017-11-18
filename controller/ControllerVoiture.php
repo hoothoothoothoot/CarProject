@@ -5,6 +5,17 @@ $tab = File::build_path($path_array);
 require_once ("$tab"); // chargement du modèle
 
 class ControllerVoiture {
+    
+    public static function delete() {
+        $immat = $_GET['immat'];
+        $v = ModelVoiture::deleteByImmat($immat);
+        $pagetitle = 'Car deleted';
+        $view = 'deleted';
+        $controller = 'voiture';
+        require (File::build_path("view","view.php"));
+        ControllerVoiture::readAll();
+    }
+    
     public static function readAll() {
         $tab_v = ModelVoiture::getAllVoitures();     //appel au modèle pour gerer la BD
         $pagetitle = 'All cars';
@@ -37,8 +48,20 @@ class ControllerVoiture {
     }
     
     public static function created() {
-        $car = new ModelVoiture($_POST['marque'], $_POST['couleur'], $_POST['immatriculation']);
+        $car = new ModelVoiture($_POST['marque'], $_POST['couleur'], $_POST['immatriculation'], $_POST['password']);
         $car -> save();
+        ControllerVoiture::readAll();
+    }
+    
+    public static function update() {
+        $pagetitle = 'Update your car';
+        $controller = 'voiture';
+        $view = 'update';
+        require (File::buildpath("view","view.php"));
+    }
+    
+    public static function updated() {
+        $car = ModelVoiture::update($_POST);
         ControllerVoiture::readAll();
     }
 }

@@ -3,7 +3,7 @@
         <legend>My form:</legend>
         <p>
             <label for="marque_id">Brand</label> :
-            <input type="text" placeholder="Ex : Volvo" name="marque" id="marque_id" required/>
+            <input type="text" placeholder=<?php"Ex : Volvo"?> name="marque" id="marque_id" required/>
         </p>
         <p>
             <label for="couleur_id">Color</label> :
@@ -14,16 +14,7 @@
             <input type="text" placeholder="Ex : 256AB34" name="immatriculation" id="immat_id" required/>
         </p>
         <p>
-            <label for="password">Password</label>
-            <input type="password" placeholder="" name="password" id="password" required/>
-        </p>
-        <p>
-            <label for="confirm">Please confirm password</label>
-            <input type="password" placeholder="" name="confirm" id="confirm" required/>
-        </p>
-        <p>
             <input type="submit" value="Submit" />
         </p>
     </fieldset> 
 </form>
-   
